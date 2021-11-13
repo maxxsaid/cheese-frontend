@@ -3,10 +3,10 @@ import { Route, Routes } from "react-router-dom";
 import Index from "../pages/index";
 import Show from "../pages/show";
 const Main = (props) => {
-  // State to hold our list of people
+  // State to hold our list of cheeses
   const [cheeses, setCheeses] = useState(null);
   const URL = "https://ms-cheese-backend.herokuapp.com/cheese/";
-  // function to get updated list of people
+  // function to get updated list of cheeses
   const getCheeses = async () => {
     // make the api call
     const response = await fetch(URL);
@@ -25,7 +25,7 @@ const Main = (props) => {
       },
       body: JSON.stringify(cheese),
     });
-    // get updated list of people
+    // get updated list of cheeses
     getCheeses();
   };
 
