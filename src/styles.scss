@@ -1,39 +1,48 @@
 // ---------------------
 // Variables
 // ---------------------
-$maincolor: black;
-$contrastcolor: white;
+$maincolor: rgb(41, 41, 39);
+$contrastcolor: rgb(240, 234, 222);
 
 // ---------------------
 // Mixins
 // ---------------------
 
-@mixin white-text-black-bg {
+@mixin light-text-dark-bg {
   color: $contrastcolor;
   background-color: $maincolor;
 }
 
-@mixin black-text-white-bg {
+@mixin dark-text-light-bg {
   color: $maincolor;
   background-color: $contrastcolor;
 }
 
 nav {
-  @include white-text-black-bg;
+  @include light-text-dark-bg;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  border: 5px solid rgb(216, 56, 34);
+  margin: 20px;
 
   a {
-    @include white-text-black-bg();
+    @include light-text-dark-bg();
 
     div {
-      margin: 10px;
-      font-size: large;
+      margin: 20px;
+      font-size: 2.5em;
     }
   }
 }
 
 img {
-  width: 400px;
+  width: 500px;
   height: auto;
+  border: 8px solid rgb(216, 56, 34);
+  border-radius: 10px 200px 200px 10px;
+}
+
+body {
+  background-color: beige;
+  text-align: center;
 }
